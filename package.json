@@ -1,0 +1,16 @@
+{
+  "name": "trip-service-kata",
+  "version": "1.0.0",
+  "description": "Kata for a legacy code hands-on session. The objective is to write tests and refactor the given legacy code.",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha ./test/**/*.js",
+    "test:watch": "./node_modules/.bin/mocha ./test/**/*.js --watch --reporter min",
+    "coverage": "istanbul cover _mocha"
+  },
+  "author": "Christoph Neuroth <christoph.neuroth@gmail.com>",
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "sinon": "^6.1.5"
+  }
+}
