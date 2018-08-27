@@ -1,6 +1,4 @@
-//x = string
-// op = StringOp enum
-const transform = (x, count, spacing, op) {
+const transform = (x, count, spacing, op) => {
   let buffer = '';
   let buffer1 = '';
   const w = count + spacing;
@@ -11,14 +9,14 @@ const transform = (x, count, spacing, op) {
               for (let i = 0; i < w - spacing; i++) {
                   buffer += '-';
               }
-              const ptext = buffer(); // need to be a copy?
+              const ptext = buffer; // need to be a copy?
               pads = "";
               buffer1 += ptext;
-              let l = w - ptext.length();
+              let l = w - ptext.length;
               for (let j = 0; j < l; j++) {
                   pads += " ";
               }
-              buffer1 << pads;
+              buffer1 += pads;
           }
           break;
       case 'pad':
@@ -37,3 +35,5 @@ const transform = (x, count, spacing, op) {
   }
   return buffer1;
 }
+
+module.exports = transform;
